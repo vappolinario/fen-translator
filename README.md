@@ -1,5 +1,7 @@
 # Fen Translator
 
+Simple react [App](http://chess.appolinario.com) that translates FEN strings
+
 ## Features
 - [X] Translate pt-br FEN string to en-us
     - [X] piece placement
