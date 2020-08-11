@@ -1,10 +1,12 @@
 import React from 'react';
+import Chessboard from 'chessboardjsx';
 
 const FenOutput = (props) => {
     return (
         <div>
             <h3>Translation</h3>
-            <span>{props.value}</span>
+            <p><span>{props.value}</span></p>
+            <Chessboard position={props.value} draggable={false} showNotation={false} width={320} />
         </div>
     );
 };
