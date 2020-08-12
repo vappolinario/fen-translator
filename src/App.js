@@ -31,13 +31,17 @@ function App() {
 
     return (
         <div className="App">
-            <FenInput
-                onFenStringChange={onFenStringChange}
-                fenString={fenString}
-                onFormSubmitted={onFormSubmitted}
-            />
-            <FenModifiers turn={turn} onTurnChange={onTurnChange} />
-            <FenOutput value={translated} />
+            <div className="container">
+                <h2>FEN String Translator</h2>
+                <a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">What is a FEN string?</a>
+                <FenInput
+                    onFenStringChange={onFenStringChange}
+                    fenString={fenString}
+                    onFormSubmitted={onFormSubmitted}
+                />
+                <FenModifiers turn={turn} onTurnChange={onTurnChange} />
+                <FenOutput value={translated} />
+            </div>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const FenInput = (props) => {
     return (
         <form onSubmit={props.onFormSubmitted}>
-            <h3 htmlFor="fenInput">Enter FEN String</h3>
+            <h3 htmlFor="fenInput">Initial FEN String</h3>
             <input
                 id="fenInput"
                 name="fenInput"

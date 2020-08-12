@@ -14,18 +14,20 @@ const FenOutput = (props) => {
 
     return (
         <div>
-            <h3>Translation</h3>
+            <h3>Result</h3>
             <p>
                 <span className={ isValidFen ? "" : "alert" }>
                     {isValidFen ? "" : "Invalid Position : "}{props.value}
                 </span>
             </p>
-            <Chessboard
-                position={props.value}
-                draggable={false}
-                showNotation={false}
-                width={320}
-            />
+            <div className="chessBoard">
+                <Chessboard
+                    position={props.value}
+                    draggable={false}
+                    showNotation={false}
+                    width={320}
+                />
+            </div>
         </div>
     );
 };
