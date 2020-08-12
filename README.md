@@ -7,8 +7,8 @@ Simple react [App](http://chess.appolinario.com) that translates FEN strings
     - [X] piece placement
     - [X] active color
 - [X] Show board with position from FEN string
-- [ ] CSS
-- [ ] Validate FEN strings
+- [X] CSS
+- [X] Validate FEN strings
 - [ ] Modify FEN string using the board
 - [ ] Translate en-us FEN string to pt-br
 - [ ] Aditional FEN support
