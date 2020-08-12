@@ -4,8 +4,8 @@ import FenOutput from './components/FenOutput';
 import FenModifiers from './components/FenModifiers';
 
 function App() {
-    const [fenString, setFenString] = useState('');
-    const [translated, setTranslated] = useState('');
+    const [fenString, setFenString] = useState('tcbdrbct-pppppppp-8-8-8-8-PPPPPPPP-TCBDRBCT b RDrd - 0 1');
+    const [translated, setTranslated] = useState('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
     const [turn, setTurn] = useState('');
 
     const onFenStringChange = useCallback((e) => {setFenString(e.target.value)}, []);
@@ -22,18 +22,10 @@ function App() {
     const onFormSubmitted = useCallback((e) => {
         e.preventDefault();
         const output = fenString.replace(/[-dDRrTtCc]/g, function (m) {
-            return {
-                'r': 'k',
-                'R': 'K',
-                'd': 'q',
-                'D': 'Q',
-                't': 'r',
-                'T': 'R',
-                'c': 'n',
-                'C': 'N',
-                '-': '/',
-            }[m];
+            return { 'r': 'k', 'R': 'K', 'd': 'q', 'D': 'Q', 't': 'r',
+                'T': 'R', 'c': 'n', 'C': 'N', '-': '/', }[m];
         });
+
         setTranslated(output);
     }, [fenString]);
 
