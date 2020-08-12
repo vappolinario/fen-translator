@@ -16,7 +16,8 @@ const FenOutput = (props) => {
         <div>
             <h3>Result</h3>
             <p>
-                <span className={ isValidFen ? "" : "alert" }>
+                <span className={ isValidFen ? "" : "alert" }
+                    onClick={() => {navigator.clipboard.writeText(props.value)}}>
                     {isValidFen ? "" : "Invalid Position : "}{props.value}
                 </span>
             </p>
