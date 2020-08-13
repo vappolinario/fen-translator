@@ -1,12 +1,12 @@
 import React, {useState, useCallback} from 'react';
 import FenInput from './components/FenInput';
 import FenOutput from './components/FenOutput';
-import FenModifiers from './components/FenModifiers';
+import FenModifiers, { WHITE } from './components/FenModifiers';
 
 function App() {
     const [fenString, setFenString] = useState('tcbdrbct-pppppppp-8-8-8-8-PPPPPPPP-TCBDRBCT b RDrd - 0 1');
     const [translated, setTranslated] = useState('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
-    const [turn, setTurn] = useState('');
+    const [turn, setTurn] = useState(WHITE);
 
     const onFenStringChange = useCallback((e) => {setFenString(e.target.value)}, []);
 
