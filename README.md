@@ -8,9 +8,9 @@ Simple react [App](http://chess.appolinario.com) that translates FEN strings
     - [X] active color
 - [X] Show board with position from FEN string
 - [X] CSS
-- [o] Validate FEN strings
+- [X] Validate FEN strings
     - [X] Basic validation (64 squares)
-    - [ ] Individual row validation
+    - [X] Individual row validation
 - [ ] Change board component
 - [ ] Aditional FEN support
     - [ ] castling availability
