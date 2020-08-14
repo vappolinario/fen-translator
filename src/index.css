@@ -86,8 +86,3 @@ input#fenInput {
 div {
     text-align: center;
 }
-
-.chessBoard {
-    margin-right: -50%;
-    transform: translate(15%, 1%)
-}

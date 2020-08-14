@@ -11,7 +11,7 @@ Simple react [App](http://chess.appolinario.com) that translates FEN strings
 - [X] Validate FEN strings
     - [X] Basic validation (64 squares)
     - [X] Individual row validation
-- [ ] Change board component
+- [X] Change board component
 - [ ] Aditional FEN support
     - [ ] castling availability
     - [ ] En passant

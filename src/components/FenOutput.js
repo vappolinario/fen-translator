@@ -1,5 +1,5 @@
 import React  from 'react';
-import Chessboard from 'chessboardjsx';
+import {ChessBoard} from 'react-fen-chess-board';
 
 function validateFEN(fenString) {
     const fields = fenString
@@ -41,10 +41,8 @@ const FenOutput = (props) => {
     const cssClass = isValidFen.valid ? undefined : "alert" ;
     const board = !isValidFen.valid ? "" :
         <div className="chessBoard">
-            <Chessboard
-                position={props.value}
-                draggable={false}
-                showNotation={false}
+            <ChessBoard
+                fen={props.value}
                 width={320}
             />
         </div>;

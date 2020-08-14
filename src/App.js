@@ -21,13 +21,13 @@ function App() {
 
     const onFormSubmitted = useCallback((e) => {
         e.preventDefault();
-        const output = fenString.replace(/[-dDRrTtCc]/g, function (m) {
+        const output = fenString.split(' ')[0].replace(/[-dDRrTtCc]/g, function (m) {
             return { 'r': 'k', 'R': 'K', 'd': 'q', 'D': 'Q', 't': 'r',
                 'T': 'R', 'c': 'n', 'C': 'N', '-': '/', }[m];
-        });
+        }) + ' ' + turn + ' - - 0 1';
 
         setTranslated(output);
-    }, [fenString]);
+    }, [fenString, turn]);
 
     return (
         <div className="App">
