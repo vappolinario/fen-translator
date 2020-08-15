@@ -8,7 +8,7 @@ function validateFEN(fenString) {
     const kings = fields.match(/[kK]/g).length;
     if ( kings !== 2 ) {
         return {
-            message: "Invalid quantity of kings " + kings,
+            message: "Invalid number of kings: " + kings,
             valid: false
         }
     }
@@ -33,16 +33,15 @@ function isInvalidRow(row) {
         .reduce((a,b) => a+b) !== 8; // the sum should be 64 (board squares)
 }
 
-const FenOutput = (props) => {
+const FenOutput = ({value}) => {
 
-    const isValidFen = validateFEN(props.value);
-    console.log('valid',isValidFen);
-        const message = isValidFen.valid ? props.value : isValidFen.message;
+    const isValidFen = validateFEN(value);
+    const message = isValidFen.valid ? value : isValidFen.message;
     const cssClass = isValidFen.valid ? undefined : "alert" ;
     const board = !isValidFen.valid ? "" :
-        <div className="chessBoard">
+        <div className="chessBoard" data-testid="fenoutput-test-id" >
             <ChessBoard
-                fen={props.value}
+                fen={value}
                 width={320}
             />
         </div>;
@@ -52,7 +51,7 @@ const FenOutput = (props) => {
             <h3>Result</h3>
             <p>
                 <span className={cssClass}
-                    onClick={() => {navigator.clipboard.writeText(props.value)}}>
+                    onClick={() => {navigator.clipboard.writeText(value)}}>
                     {message}
                 </span>
             </p>
