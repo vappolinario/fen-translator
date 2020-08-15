@@ -2,6 +2,7 @@ import React, {useState, useCallback} from 'react';
 import FenInput from './components/FenInput/FenInput.js';
 import FenOutput from './components/FenOutput/FenOutput.js';
 import FenModifiers, { WHITE } from './components/FenModifiers/FenModifiers.js';
+import ForkRibbon from './components/ForkRibbon.js';
 
 function App() {
     const [fenString, setFenString] = useState('tcbdrbct-pppppppp-8-8-8-8-PPPPPPPP-TCBDRBCT b RDrd - 0 1');
@@ -41,6 +42,7 @@ function App() {
                 />
                 <FenModifiers turn={turn} onTurnChange={onTurnChange} />
                 <FenOutput value={translated} />
+                <ForkRibbon />
             </div>
         </div>
     );
