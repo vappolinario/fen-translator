@@ -34,7 +34,6 @@ function isInvalidRow(row) {
 }
 
 const FenOutput = ({value}) => {
-
     const isValidFen = validateFEN(value);
     const message = isValidFen.valid ? value : isValidFen.message;
     const cssClass = isValidFen.valid ? undefined : "alert" ;

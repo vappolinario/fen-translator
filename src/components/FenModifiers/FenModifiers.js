@@ -3,12 +3,12 @@ import React from 'react';
 export const WHITE = "w";
 export const BLACK = "b";
 
-const FenModifiers = (props) => {
+const FenModifiers = ({turn, onTurnChange}) => {
     return (
         <div>
             <h3>Active Color</h3>
-            <input type="radio" value={WHITE} checked={props.turn === WHITE} onChange={props.onTurnChange}/>White
-            <input type="radio" value={BLACK} checked={props.turn === BLACK} onChange={props.onTurnChange}/>Black
+            <input type="radio" value={WHITE} checked={turn === WHITE} onChange={onTurnChange}/>White
+            <input type="radio" value={BLACK} checked={turn === BLACK} onChange={onTurnChange}/>Black
         </div>
     );
 };

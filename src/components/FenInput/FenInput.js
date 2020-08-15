@@ -1,14 +1,14 @@
 import React from 'react';
 
-const FenInput = (props) => {
+const FenInput = ({onFormSubmitted, fenString, onFenStringChange}) => {
     return (
-        <form onSubmit={props.onFormSubmitted}>
+        <form onSubmit={onFormSubmitted}>
             <h3 htmlFor="fenInput">Initial FEN String</h3>
             <input
                 id="fenInput"
                 name="fenInput"
-                value={props.fenString}
-                onChange={props.onFenStringChange}
+                value={fenString}
+                onChange={onFenStringChange}
             />
             <button>Translate</button>
         </form>
