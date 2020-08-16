@@ -46,7 +46,7 @@ const FenOutput = ({value}) => {
         </div>;
 
     return (
-        <div>
+        <div className="fen-output">
             <h3>Result</h3>
             <p>
                 <span className={cssClass}

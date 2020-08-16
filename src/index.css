@@ -13,32 +13,52 @@ body {
 }
 
 .container {
-    display: block;
-    width: 600px;
+    display: grid;
+    width: 80vw;
     margin: 10px auto 100px;
     background-color:#fff;
     padding:0px 10px 10px 10px;
     border-radius:10px;
 }
 
+.container-with-history
+{
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "header header"
+    "fen-input history"
+    "fen-modifiers history"
+    "fen-output history"
+    ;
+}
+
+.fen-history {
+    grid-area: history;
+    text-align: left;
+    font-size: 80%;
+}
+
+.fen-modifiers {
+    grid-area: fen-modifiers;
+}
+
+.fen-output {
+    grid-area: fen-output;
+}
+
+.fen-input {
+    grid-area: fen-input;
+}
+
+.header {
+    grid-area: header;
+}
+
+
 h2 {
     text-align:center;
     padding-top:10px;
     margin-bottom:0px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-li * {
-    float: left;
-}
-
-li,h3 {
-    clear: both;
-    list-style: none;
 }
 
 input,button {

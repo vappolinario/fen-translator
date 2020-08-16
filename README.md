@@ -13,7 +13,11 @@ Simple react [App](http://chess.appolinario.com) that translates FEN strings
     - [X] Individual row validation
 - [X] Change board component
 - [X] Add tests
-- [ ] Translation History
+- [o] Translation History
+    - [X] Basic History
+    - [X] Load on click
+    - [ ] styling
+    - [ ] database persistence
 - [ ] Aditional FEN support
     - [ ] castling availability
     - [ ] En passant

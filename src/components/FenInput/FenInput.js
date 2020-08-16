@@ -2,7 +2,7 @@ import React from 'react';
 
 const FenInput = ({onFormSubmitted, fenString, onFenStringChange}) => {
     return (
-        <form onSubmit={onFormSubmitted}>
+        <form className="fen-input" onSubmit={onFormSubmitted}>
             <h3 htmlFor="fenInput">Initial FEN String</h3>
             <input
                 id="fenInput"
